@@ -17,6 +17,7 @@ setup(
         'Programming Language :: Python',
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
+        'Framework :: Django',
         'License :: Public Domain',
         'Operating System :: OS Independent',
         'Topic :: Software Development :: Libraries :: Python Modules',
