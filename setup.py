@@ -5,7 +5,7 @@ setup(
     version='0.1a',
     license='Public Domain',
     description='A simplified API for AmFast\'s AMF remoting functionality, '
-        'designed to make setting up AMF remoting with Django quick and easy.'
+        'designed to make Django AMF remoting simple and painless.'
     package_dir = {'':'src'},
     py_modules=['django_amf_remoting'],
     url='http://github.com/benhodgson/django-simple-amf-remoting',
