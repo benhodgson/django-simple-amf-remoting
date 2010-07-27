@@ -25,7 +25,7 @@ class SimpleService(Service):
         By default, the name of the method is used for the name of the exposed
         method, although this can be overridden:
         
-        >>> @math_service.expose('scalar_product')
+        >>> @math_service.expose('product')
         ... def multiply(a, b):
         ...     return a * b
         ...
@@ -39,10 +39,12 @@ class SimpleService(Service):
     
     """
     
-    def __init__(self, name, *args, **kwargs):
+    VALID_FUNCTION_NAME_RE = re.compile(r'[a-zA-Z_][a-zA-Z0-9_]*')
+    
+    def __init__(self, name, channel_name=None, *args, **kwargs):
         
         super(SimpleService, self).__init__(name, *args, **kwargs)
-        self.channel = DjangoChannel(name)
+        self.channel = DjangoChannel(channel_name or name)
         self.channel_set = ChannelSet()
         self.channel_set.mapChannel(self.channel)
         self.channel_set.service_mapper.mapService(self)
