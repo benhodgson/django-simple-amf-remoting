@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='django-simple-amf-remoting',
-    version='0.1a',
+    version='0.1.0b',
     license='Public Domain',
     description='A simplified API for AmFast\'s AMF remoting functionality, '
         'designed to make Django AMF remoting simple and painless.',
@@ -15,7 +15,7 @@ setup(
         'rpc', 'remoting', 'pyamf', 'amfast'],
     classifiers = [
         'Programming Language :: Python',
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Framework :: Django',
         'License :: Public Domain',
